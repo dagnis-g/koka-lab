@@ -4,15 +4,16 @@ header {
 
 .header {
   padding: 1.5rem 3rem;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.61);
+  // transparent;
   border-bottom: 1px solid;
   border-color: transparent;
   transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out,
     filter 0.01s linear 0.2s;
-  filter: invert(1);
+  // filter: invert(1);
 
   &.invert {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.911);
     border-color: #000;
     filter: none;
     transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
@@ -38,7 +39,7 @@ header {
 
   .logo {
     width: auto;
-    height: 0.8rem;
+    height: 5.3rem;
   }
 
   .cart-count {

@@ -1,39 +1,35 @@
-import React from 'react';
-import Head from 'next/head';
-import Root from '../components/common/Root';
-import Footer from '../components/common/Footer';
+import React from "react";
+import Head from "next/head";
+import Root from "../components/common/Root";
+import Footer from "../components/common/Footer";
 
 const About = () => (
   <Root>
     <Head>
-      <title>About | commerce</title>
+      <title>Par Mums</title>
     </Head>
     <div className="about-container">
       {/* Row */}
-      <div className="row mt-5 pt-5 about-hero">
+      <div className="row mt-5 pt-5 about-hero ">
         <div className="col-12 col-md-10 col-lg-6 offset-md-1 offset-lg-0 row-content">
-            <div className="h-100 d-flex flex-column py-5 px-4 px-sm-5 justify-content-center">
-              <h2 className="font-size-header mb-4">
-                Commerce.js Demo Store
-              </h2>
-              <h4 className="font-size-subheader mb-4">
-                This is an open source storefront built using Chec’s headless architecture and the Commerce.js SDK. Commerce.js is a smarter, more efficient way to build eCommerce projects, and we hope you can see that as you explore the world custom eCommerce. Please build on top of, or pick apart this project for your own use. Everything in this project, from the storefront, to the cart, checkout and receipt, is 100% customizable. To build more custom eCommerce projects, using any frontend framework or platform, head over to <a href="https://commercejs.com/" target="_blank" className="cjs-link" rel="noopener noreferrer">commercejs.com</a>.
-              </h4>
-              <div className="about-cjs mt-3 d-flex flex-row">
-                <a className="px-4 py-3 font-color-white about-doc" href="https://commercejs.com/docs/" target="_blank" rel="noopener noreferrer">
-                  Documentation
-                </a>
-                <a className="px-4 py-3 about-dev" href="https://commercejs.com/docs/community/" target="_blank" rel="noopener noreferrer">
-                  Guides from the community
-                </a>
-              </div>
-            </div>
+          <div className="h-100 d-flex flex-column py-5 px-4 px-sm-5 justify-content-center">
+            <h2 className="font-size-header mb-4">Par Mums</h2>
+            <h4 className="font-size-subheader mb-4">
+              Mēs esam mākslinieki no Kurzemes laukiem un domājam, ka vislabākā iedvesma nāk tieši
+              no maģiski klusās meža skaņas, piejūras vēja šalkoņas, lapu čaboņas un putnu dziesmām
+              agri no rītīa, vai sienāžu dziesmām pie kaimiņu dīķīķa... Katrā ziņā mūsu iedvesma un
+              materiāli nākuši tieši no dabas. Mēs piedāvājam ar meistara rokām darinātas,
+              kvalitatīvī a koka materiāla preces, kas iepriecinās jebkurus dabiskā dzīvī esstila
+              piekritējus - vecākus, un, protams, viņu mazākos mīlīuļus - bērnus. Visi darinājumi
+              apstrādāti ar 100% linsēklu eļļu, kas nav kaitīgī a ne pieaugušajiem, ne bērniem.
+            </h4>
           </div>
+        </div>
 
         <div className="col-12 col-lg-6">
           <div className="about-image h-100">
             <div className="d-flex align-items-center justify-content-center h-100">
-              <img src="/cjs-illustration.svg" alt="Commerce.js illustration"/>
+              <img src="/images/parmums1.jpg" alt="Commerce.js illustration" />
             </div>
           </div>
         </div>
@@ -44,18 +40,17 @@ const About = () => (
         <div className="col-12 col-lg-6">
           <div className="about-image h-100">
             <div className="d-flex align-items-center justify-content-center h-100">
-              <img src="/netlify-illustration.svg" alt="Netlify illustration"/>
+              <img src="/netlify-illustration.svg" alt="Netlify illustration" />
             </div>
           </div>
         </div>
 
         <div className="col-12 col-md-10 col-lg-6 offset-md-1 offset-lg-0 row-content">
           <div className="h-100 d-flex flex-column justify-content-center py-5 px-4 px-sm-5">
-            <h3 className="font-size-header mb-4">
-              Deploy to Netlify
-            </h3>
+            <h3 className="font-size-header mb-4">Deploy to Netlify</h3>
             <h4 className="font-size-subheader mb-4">
-              If you would like to deploy this project live today, click the button below and watch the magic happen!
+              If you would like to deploy this project live today, click the button below and watch
+              the magic happen!
             </h4>
             <div className="mt-3">
               <a
@@ -75,11 +70,10 @@ const About = () => (
       <div className="row">
         <div className="col-12 col-md-10 col-lg-6 offset-md-1 offset-lg-0 row-content">
           <div className="h-100 d-flex flex-column justify-content-center py-5 px-4 px-sm-5">
-            <h3 className="font-size-header mb-4">
-              Clone in GitHub
-            </h3>
+            <h3 className="font-size-header mb-4">Clone in GitHub</h3>
             <h4 className="font-size-subheader mb-4">
-            If you would like to clone this project and do a manual setup, go to the repository below!
+              If you would like to clone this project and do a manual setup, go to the repository
+              below!
             </h4>
             <div className="mt-3">
               <a
@@ -97,7 +91,7 @@ const About = () => (
         <div className="col-12 col-lg-6">
           <div className="about-image h-100">
             <div className="d-flex align-items-center justify-content-center h-100">
-              <img src="/github-illustration.svg" alt="GitHub illustration"/>
+              <img src="/github-illustration.svg" alt="GitHub illustration" />
             </div>
           </div>
         </div>
@@ -108,16 +102,14 @@ const About = () => (
         <div className="col-12 col-lg-6">
           <div className="about-image h-100">
             <div className="d-flex align-items-center justify-content-center h-100">
-              <img src="/blog-illustration.svg" alt="Commerce.js blog illustration"/>
+              <img src="/blog-illustration.svg" alt="Commerce.js blog illustration" />
             </div>
           </div>
         </div>
 
         <div className="col-12 col-md-10 col-lg-6 offset-md-1 offset-lg-0 row-content">
           <div className="h-100 d-flex flex-column py-5 px-4 px-sm-5">
-            <h3 className="font-size-header mb-4">
-              Technical Blog
-            </h3>
+            <h3 className="font-size-header mb-4">Technical Blog</h3>
             <h4 className="font-size-subheader mb-4">
               Read the full technical tutorial here if you want to get into the nitty gritty!
             </h4>
