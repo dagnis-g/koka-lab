@@ -1,5 +1,5 @@
-import commerce from '../../lib/commerce'
-import { CLEAR_CUSTOMER, SET_CUSTOMER } from './actionTypes';
+import commerce from "../../lib/commerce";
+import { CLEAR_CUSTOMER, SET_CUSTOMER } from "./actionTypes";
 
 /**
  * Fetch the customer information from Commerce.js. If the customer is not
@@ -12,14 +12,17 @@ export const setCustomer = () => (dispatch) => {
     dispatch({ type: CLEAR_CUSTOMER });
     return Promise.resolve(null);
   }
-  return commerce.customer.about().then((customer) => {
-    dispatch({ type: SET_CUSTOMER, payload: customer });
-  }).catch(() => {
-    // Most likely a 404, meaning the customer doesn't exist. It should be logged out
-    commerce.customer.logout();
-    dispatch({ type: CLEAR_CUSTOMER });
-  });
-}
+  return commerce.customer
+    .about()
+    .then((customer) => {
+      dispatch({ type: SET_CUSTOMER, payload: customer });
+    })
+    .catch(() => {
+      // Most likely a 404, meaning the customer doesn't exist. It should be logged out
+      commerce.customer.logout();
+      dispatch({ type: CLEAR_CUSTOMER });
+    });
+};
 
 /**
  * Clear the logged in customer from state, and from Commerce.js.
@@ -27,4 +30,4 @@ export const setCustomer = () => (dispatch) => {
 export const clearCustomer = () => (dispatch) => {
   commerce.customer.logout();
   dispatch({ type: CLEAR_CUSTOMER });
-}
+};

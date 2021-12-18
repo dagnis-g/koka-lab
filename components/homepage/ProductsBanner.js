@@ -21,7 +21,7 @@ class ProductsBanner extends Component {
           <Link href="/collection">
             <a className="d-flex py-3 align-items-center font-color-black borderbottom border-color-black">
               <p className="mr-3">Skatīt vairāk produktus</p>
-              <img src="/icon/arrow-long-right.svg" />
+              <img src="/icon/arrow-long-right.svg" alt="bulta pa labi" />
             </a>
           </Link>
         </div>

@@ -1,13 +1,6 @@
-import React from 'react';
+import React from "react";
 
-const Radiobox = ({
-  checked,
-  size = '24px',
-  color = '#000000',
-  className,
-  onClick,
-  ...rest
-}) => {
+const Radiobox = ({ checked, size = "24px", color = "#000000", className, onClick, ...rest }) => {
   return (
     <svg
       width="24"
@@ -17,8 +10,8 @@ const Radiobox = ({
       tabIndex="0"
       style={{ height: size, width: size, minHeight: size, minWidth: size }}
       onClick={onClick}
-      onKeyDown={e => {
-        e.key === 'Enter' && onClick();
+      onKeyDown={(e) => {
+        e.key === "Enter" && onClick();
       }}
       {...rest}
     >
@@ -50,5 +43,5 @@ const Radiobox = ({
 export default Radiobox;
 
 Radiobox.defaultProps = {
-  onClick: () => {}
+  onClick: () => {},
 };

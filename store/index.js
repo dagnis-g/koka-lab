@@ -1,7 +1,7 @@
-import { useMemo } from 'react'
-import { createStore, applyMiddleware, compose } from 'redux';
-import { HYDRATE } from 'next-redux-wrapper';
-import thunk from 'redux-thunk';
+import { useMemo } from "react";
+import { createStore, applyMiddleware, compose } from "redux";
+import { HYDRATE } from "next-redux-wrapper";
+import thunk from "redux-thunk";
 
 import {
   STORE_PRODUCTS,
@@ -18,9 +18,9 @@ import {
   ABORT_CHECKOUT,
   SET_CUSTOMER,
   CLEAR_CUSTOMER,
-} from './actions/actionTypes';
+} from "./actions/actionTypes";
 
-let store
+let store;
 // Declare initial state
 const initialState = {
   categories: [],
@@ -83,13 +83,13 @@ const reducer = (state = initialState, action) => {
       return { ...state, cart: action.payload.cart };
     // Dispatch in Checkout client-side
     case GENERATE_CHECKOUT_TOKEN:
-      return { ...state, checkout: { ...state.checkout, checkoutTokenObject: action.payload }};
+      return { ...state, checkout: { ...state.checkout, checkoutTokenObject: action.payload } };
     // Dispatch in Checkout client-side
     case GET_SHIPPING_OPTIONS:
-      return { ...state, checkout: { ...state.checkout, shippingOptions: action.payload }};
+      return { ...state, checkout: { ...state.checkout, shippingOptions: action.payload } };
     // Dispatch in Checkout client-side
     case REMOVE_SHIPPING_OPTIONS:
-      return { ...state, checkout: { ...state.checkout, shippingOptions: [] }};
+      return { ...state, checkout: { ...state.checkout, shippingOptions: [] } };
     // Dispatch in Checkout client-side
     case UPDATE_CHECKOUT_LIVE_OBJECT:
       return {
@@ -98,7 +98,7 @@ const reducer = (state = initialState, action) => {
           ...state.checkout,
           checkoutTokenObject: {
             ...state.checkout.checkoutTokenObject,
-            live: action.payload
+            live: action.payload,
           },
         },
       };
@@ -113,27 +113,19 @@ const reducer = (state = initialState, action) => {
   }
 };
 
-
-
 // Enable Redux dev tools
-const devtools = (process.browser && window.__REDUX_DEVTOOLS_EXTENSION__)
-  ? window.__REDUX_DEVTOOLS_EXTENSION__(
-    { trace: true, traceLimit: 25 }
-  )
-  : f => f;
+const devtools =
+  process.browser && window.__REDUX_DEVTOOLS_EXTENSION__
+    ? window.__REDUX_DEVTOOLS_EXTENSION__({ trace: true, traceLimit: 25 })
+    : (f) => f;
 
 // Create a makeStore function and pass in reducer to create the store
 const makeStore = () => {
-  return createStore(
-    reducer,
-    initialState,
-    compose(applyMiddleware(thunk), devtools)
-  );
+  return createStore(reducer, initialState, compose(applyMiddleware(thunk), devtools));
 };
 
-
 export const initializeStore = (initialState) => {
-  let _store = store ?? makeStore(initialState)
+  let _store = store ?? makeStore(initialState);
 
   // After navigating to a page with an initial Redux state, merge that state
   // with the current state in the store, and create a new store
@@ -141,26 +133,24 @@ export const initializeStore = (initialState) => {
     _store = makeStore({
       ...store.getState(),
       ...initialState,
-    })
+    });
     // Reset the current store
-    store = undefined
+    store = undefined;
   }
 
   // For SSG and SSR always create a new store
-  if (typeof window === 'undefined') {
-    return _store
+  if (typeof window === "undefined") {
+    return _store;
   }
   // Create the store once in the client
   if (!store) {
-    store = _store
+    store = _store;
   }
 
-  return _store
-}
-
+  return _store;
+};
 
 export function useStore(initialState) {
-  const store = useMemo(() => initializeStore(initialState), [initialState])
-  return store
+  const store = useMemo(() => initializeStore(initialState), [initialState]);
+  return store;
 }
-
