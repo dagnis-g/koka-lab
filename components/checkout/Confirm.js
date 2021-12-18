@@ -37,7 +37,7 @@ class Confirm extends Component {
         className="d-flex align-items-center text-decoration-underline cursor-pointer mt-3 mt-sm-0 no-print bg-transparent"
       >
         <img src="/icon/print.svg" className="mr-2 w-20 no-print" alt="" />
-        <div className="no-print">Print receipt</div>
+        <div className="no-print">Printēt</div>
       </button>
     );
   }
@@ -48,9 +48,9 @@ class Confirm extends Component {
     return (
       <div className="py-3">
         <div className="d-flex justify-content-between align-items-center mb-2">
-          <p>Subtotal</p>
+          <p>Preces</p>
           <p className="text-right font-weight-medium">
-            ${orderReceipt.order.subtotal.formatted_with_code}
+            {orderReceipt.order.subtotal.formatted_with_code}
           </p>
         </div>
       </div>
@@ -66,9 +66,9 @@ class Confirm extends Component {
     return (
       <div className="pb-3">
         <div className="d-flex justify-content-between align-items-center mb-2">
-          <p>Shipping</p>
+          <p>Piegāde</p>
           <p className="text-right font-weight-medium">
-            ${orderReceipt.order.shipping.price.formatted_with_code}
+            {orderReceipt.order.shipping.price.formatted_with_code}
           </p>
         </div>
       </div>
@@ -80,9 +80,9 @@ class Confirm extends Component {
 
     return (
       <div className="d-flex justify-content-between align-items-center mb-2 pt-3 border-top border-color-black">
-        <p className="font-size-title font-weight-semibold">Order total</p>
+        <p className="font-size-title font-weight-semibold">Kopā</p>
         <p className="text-right font-weight-semibold font-size-title">
-          ${orderReceipt.order.total.formatted_with_code}
+          {orderReceipt.order.total.formatted_with_code}
         </p>
       </div>
     );
@@ -105,24 +105,22 @@ class Confirm extends Component {
                 <div className="bg-success700 h-64 w-64 d-flex rounded-circle align-items-center justify-content-center mb-4">
                   <img src="/icon/check.svg" className="w-40" alt="" />
                 </div>
-                <h3 className="text-center font-family-secondary mb-3">
-                  Thank you for your purchase!
-                </h3>
+                <h3 className="text-center font-family-secondary mb-3">Paldies par pirkumu!</h3>
                 <h4 className="text-center font-size-subheader mb-3">
-                  Your order completed successfully
+                  Pasūtījums veikts veiksmīgi
                 </h4>
                 <p className="text-center font-color-light mb-5">
-                  Here is your order number for reference: {orderReceipt.customer_reference}
+                  Pasūtījuma numurs: {orderReceipt.customer_reference}
                 </p>
                 <div className="d-flex w-100 justify-content-center flex-column flex-sm-row">
                   <Link href="/">
                     <a className="checkout-confirm-buttons px-3 py-3 text-center flex-grow-1 border bg-white border-color-gray500 font-color-light mb-2 mb-sm-0 mr-sm-2 no-print">
-                      Go back home
+                      Uz sākumu
                     </a>
                   </Link>
                   <Link href="/collection">
                     <a className="checkout-confirm-buttons px-3 py-3 text-center flex-grow-1 bg-black font-color-white no-print">
-                      Continue shopping
+                      Turpināt iepirkties
                     </a>
                   </Link>
                 </div>
@@ -134,16 +132,14 @@ class Confirm extends Component {
                 <div className="p-sm-4">
                   <div className="border-bottom border-color-gray400 d-flex justify-content-between align-items-start pb-3 flex-column flex-sm-row">
                     <div>
-                      <p className="font-color-light mb-2">
-                        Receipt number: {orderReceipt.customer_reference}
-                      </p>
-                      <p className="font-size-subheader">Order details</p>
+                      <p className="font-color-light mb-2">{orderReceipt.customer_reference}</p>
+                      <p className="font-size-subheader">Pasūtījuma detaļas</p>
                     </div>
                     {this.renderPrintButton()}
                   </div>
                   <div className="border-bottom border-color-gray400 d-flex align-items-start py-4 flex-column flex-sm-row">
                     <div>
-                      <p className="font-color-light mr-4 mb-3 mb-sm-0">Ships to</p>
+                      <p className="font-color-light mr-4 mb-3 mb-sm-0">Piegāde uz</p>
                     </div>
                     <div className="flex-grow-1">
                       <p className="font-color-medium">{orderReceipt.shipping.street}</p>

@@ -90,7 +90,7 @@ class Cart extends Component {
               {/* Cart Header */}
               <div className="px-4 px-md-5">
                 <div className="pt-4 pb-3 borderbottom border-color-black d-flex justify-content-between align-items-center">
-                  <p className="font-family-secondary font-size-subheader">Shopping Cart</p>
+                  <p className="font-family-secondary font-size-subheader"> Pirkumu Grozs</p>
                   <button className="bg-transparent p-0" onClick={() => toggle(false)}>
                     <img src="/icon/cross.svg" title="Times icon" alt="" />
                   </button>
@@ -106,21 +106,21 @@ class Cart extends Component {
                   {/* Cart Footer */}
                   <div className="cart-footer">
                     <div className="mb-3 d-flex">
-                      <p className="font-color-light mr-2 font-weight-regular">Subtotal:</p>
+                      <p className="font-color-light mr-2 font-weight-regular">Cena:</p>
                       <p>{cart.subtotal.formatted_with_symbol}</p>
                     </div>
                     <div className="row">
                       <div className="col-6 d-none d-md-block">
                         <Link href="/collection">
                           <a className="h-56 d-flex align-items-center justify-content-center border border-color-black bg-white w-100 flex-grow-1 font-weight-medium font-color-black px-3">
-                            Continue Shopping
+                            Turpināt iepirkties
                           </a>
                         </Link>
                       </div>
                       <div className="col-12 col-md-6">
                         <Link href="/checkout">
                           <a className="h-56 d-flex align-items-center justify-content-center bg-black w-100 flex-grow-1 font-weight-medium font-color-white px-3">
-                            Checkout
+                            Pasūtīt
                           </a>
                         </Link>
                       </div>
@@ -138,7 +138,7 @@ class Cart extends Component {
                       0
                     </div>
                   </div>
-                  <p className="text-center font-weight-medium">Your cart is empty</p>
+                  <p className="text-center font-weight-medium">Jūsu grozs ir tukšs</p>
                 </div>
               )}
             </div>

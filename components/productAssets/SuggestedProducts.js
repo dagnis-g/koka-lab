@@ -10,12 +10,12 @@ class SuggestedProducts extends Component {
     return (
       <div className="custom-container py-5 my-5">
         <div className="d-flex flex-column align-items-center mb-5 pb-4">
-          <p className="font-color-medium mb-4">Suggested products</p>
+          <p className="font-color-medium mb-4">Citas mūsu preces</p>
           <p
             className="text-center font-size-display1 mb-3 font-weight-medium"
             style={{ maxWidth: '32rem' }}
           >
-            You may also like to check out these products.
+            Varūt vēlaties aplūkot arī citus produktus
           </p>
         </div>
         <ProductRow products={products.slice(0, 4)} />

@@ -74,7 +74,7 @@ class CartItem extends Component {
                 className="text-right text-decoration-underline font-color-medium cursor-pointer"
                 onClick={() => this.handleRemoveFromCart(item.id)}
               >
-                Remove
+                Izņemt
               </p>
             </div>
           </div>

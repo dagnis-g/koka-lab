@@ -52,7 +52,7 @@ export default class AddressForm extends Component {
         <div className="row">
           <div className="col-12 mb-3">
             <label className="w-100">
-              <p className="mb-1 font-size-caption font-color-light">Full name*</p>
+              <p className="mb-1 font-size-caption font-color-light">Pilns vārds*</p>
               <input
                 required
                 name={`${type}[name]`}
@@ -66,11 +66,11 @@ export default class AddressForm extends Component {
         <div className="row">
           <div className="col-12 col-sm-6 mb-3">
             <label className="w-100">
-              <p className="mb-1 font-size-caption font-color-light">Country*</p>
+              <p className="mb-1 font-size-caption font-color-light">Valsts*</p>
               <Dropdown
                 required
                 name={`${type}[country]`}
-                placeholder="Select a country"
+                placeholder="Izvēlēties valsti"
                 value={country}
               >
                 {Object.entries(countries).map(([code, name]) => (
@@ -83,7 +83,7 @@ export default class AddressForm extends Component {
           </div>
           <div className="col-12 col-sm-6 mb-3">
             <label className="w-100">
-              <p className="mb-1 font-size-caption font-color-light">City*</p>
+              <p className="mb-1 font-size-caption font-color-light">Pilsēta*</p>
               <input
                 required
                 name={`${type}[town_city]`}
@@ -97,25 +97,25 @@ export default class AddressForm extends Component {
         <div className="row">
           <div className="col-12 col-sm-6 mb-3">
             <label className="w-100">
-              <p className="mb-1 font-size-caption font-color-light">Address line 1*</p>
+              <p className="mb-1 font-size-caption font-color-light">Adrese*</p>
               <input
                 required
                 autoComplete="street-address"
                 name={`${type}[street]`}
                 value={street}
                 className="rounded-0 w-100"
-                placeholder="House number, steet address, etc."
+                placeholder="Mājas nr., Dzīvoklis, Iela utt..."
               />
             </label>
           </div>
           <div className="col-12 col-sm-6 mb-3">
             <label className="w-100">
-              <p className="mb-1 font-size-caption font-color-light">Address line 2 (optional)</p>
+              <p className="mb-1 font-size-caption font-color-light">Adrese(papildus)</p>
               <input
                 name={`${type}[street_2]`}
                 value={street2}
                 className="rounded-0 w-100"
-                placeholder="Apartment, suite number, etc."
+                placeholder=""
               />
             </label>
           </div>
@@ -123,7 +123,7 @@ export default class AddressForm extends Component {
         <div className="row">
           <div className="col-12 col-sm-6 mb-3">
             <label className="w-100">
-              <p className="mb-1 font-size-caption font-color-light">State/province/region*</p>
+              <p className="mb-1 font-size-caption font-color-light">Novads*</p>
               <Dropdown
                 required
                 name={`${type}[region]`}
@@ -140,7 +140,7 @@ export default class AddressForm extends Component {
           </div>
           <div className="col-12 col-sm-6 mb-3">
             <label className="w-100">
-              <p className="mb-1 font-size-caption font-color-light">Postal code/zip code*</p>
+              <p className="mb-1 font-size-caption font-color-light">Pasta indekss*</p>
               <input
                 required
                 autoComplete="postal-code"

@@ -27,7 +27,7 @@ export default function Product() {
   const [showDetails, setShowDetails] = useState(false);
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
-
+  console.log(product);
   const toggleShipping = () => {
     setShowShipping(!showShipping);
   };
@@ -55,7 +55,7 @@ export default function Product() {
   }, [permalink]);
 
   if (loading) {
-    return <TemplatePage page={{ message: 'Loading...' }} />;
+    return <TemplatePage page={{ message: 'Lādējas...' }} />;
   }
 
   if (product === null) {
@@ -66,7 +66,7 @@ export default function Product() {
   return (
     <Root>
       <Head>
-        <title>{product.name} | commerce</title>
+        <title>{product.name} | KL</title>
       </Head>
 
       <div className="py-5 my-5">
@@ -98,17 +98,16 @@ export default function Product() {
               onClick={toggleShipping}
               className="d-flex cursor-pointer py-3 justify-content-between font-weight-medium"
             >
-              Shipping and returns
+              Piegāde un preču atgriešana.
               <img src="/icon/plus.svg" />
             </div>
             <Collapse isOpened={showShipping}>
               <div className="pb-4 font-color-medium">
-                Arrives in 5 to 7 days, returns accepted within 30 days. For more information, click
-                here.
+                Preces izsūtam 2 - 5 darba dienu laikā. Preces var atgriezt 14 dienu laikā.
               </div>
             </Collapse>
             <div className="h-1 border-bottom border-color-black" />
-            <div
+            {/* <div
               onClick={toggleDetails}
               className="d-flex cursor-pointer py-3 justify-content-between font-weight-medium"
             >
@@ -121,14 +120,15 @@ export default function Product() {
                 dangerouslySetInnerHTML={{
                   __html: detailView,
                 }}
+                
               />
-            </Collapse>
+            </Collapse> */}
             <div className="h-1 borderbottom border-color-black" />
           </div>
         </div>
       </div>
 
-      <ClientReview />
+      {/* <ClientReview /> */}
       <SuggestedProducts />
       <ExploreBanner />
       <SocialMedia />

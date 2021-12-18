@@ -135,36 +135,36 @@ class Header extends Component {
     }, 3000);
   }
 
-  renderLoginLogout() {
-    const { customer } = this.props;
-    const { loggedIn } = this.state;
+  // renderLoginLogout() {
+  //   const { customer } = this.props;
+  //   const { loggedIn } = this.state;
 
-    if (loggedIn) {
-      return (
-        <div className="d-flex align-items-center">
-          {customer && customer.firstname && (
-            <span className="mr-2 font-weight-regular">Hi, {customer.firstname}!</span>
-          )}
-          <Link href="/account">
-            <a className="font-color-black mx-2">My account</a>
-          </Link>
-          <button
-            className="bg-transparent mr-2 font-color-black font-weight-semibold"
-            type="button"
-            onClick={this.handleLogout}
-          >
-            Logout
-          </button>
-        </div>
-      );
-    }
+  //   if (loggedIn) {
+  //     return (
+  //       <div className="d-flex align-items-center">
+  //         {customer && customer.firstname && (
+  //           <span className="mr-2 font-weight-regular">Hi, {customer.firstname}!</span>
+  //         )}
+  //         <Link href="/account">
+  //           <a className="font-color-black mx-2">My account</a>
+  //         </Link>
+  //         <button
+  //           className="bg-transparent mr-2 font-color-black font-weight-semibold"
+  //           type="button"
+  //           onClick={this.handleLogout}
+  //         >
+  //           Logout
+  //         </button>
+  //       </div>
+  //     );
+  //   }
 
-    return (
-      <Link href="/login">
-        <a className="font-color-black login">Login</a>
-      </Link>
-    );
-  }
+  //   return (
+  //     <Link href="/login">
+  //       <a className="font-color-black login">Login</a>
+  //     </Link>
+  //   );
+  // }
 
   render() {
     const { showMobileMenu, showCart } = this.state;
@@ -201,7 +201,10 @@ class Header extends Component {
             </Link>
           </div>
           <div className="d-flex">
-            {process.browser && this.renderLoginLogout()}
+            {
+              process.browser
+              // && this.renderLoginLogout()
+            }
             <div className="position-relative cursor-pointer" onClick={this.toggleCart}>
               <Animation isStopped={this.state.playAddToCartAnimation} />
               <div className="cart-count position-absolute font-size-tiny font-weight-bold">
