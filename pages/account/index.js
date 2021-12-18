@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import Head from "next/head";
-import Root from "../../components/common/Root";
-import Footer from "../../components/common/Footer";
-import TemplatePage from "../../components/common/TemplatePage";
-import LoggedOut from "../loggedOut";
-import Link from "next/link";
-import commerce from "../../lib/commerce";
-import moment from "moment";
-import { connect } from "react-redux";
-import Router, { withRouter } from "next/router";
+import React, { Component } from 'react';
+import Head from 'next/head';
+import Root from '../../components/common/Root';
+import Footer from '../../components/common/Footer';
+import TemplatePage from '../../components/common/TemplatePage';
+import LoggedOut from '../loggedOut';
+import Link from 'next/link';
+import commerce from '../../lib/commerce';
+import moment from 'moment';
+import { connect } from 'react-redux';
+import Router, { withRouter } from 'next/router';
 
 class CustomerAccountPage extends Component {
   constructor(props) {
@@ -31,7 +31,7 @@ class CustomerAccountPage extends Component {
   verifyAuth() {
     const isLogged = commerce.customer.isLoggedIn();
     if (!isLogged) {
-      return Router.push("/");
+      return Router.push('/');
     }
     this.getOrders();
   }
@@ -43,7 +43,7 @@ class CustomerAccountPage extends Component {
     const date = moment.unix(dateTime);
 
     if (date.isValid()) {
-      return date.format("MMM Do Y");
+      return date.format('MMM Do Y');
     }
     return null;
   }
@@ -77,7 +77,7 @@ class CustomerAccountPage extends Component {
       .catch((error) => {
         this.setState({
           isError: true,
-          message: ["Opps, looks like an error occurred!"],
+          message: ['Opps, looks like an error occurred!'],
         });
       });
   }
@@ -89,11 +89,11 @@ class CustomerAccountPage extends Component {
     if (!status) {
       return <span className="badge badge-secondary">Processing</span>;
     }
-    if (status === "fulfilled") {
+    if (status === 'fulfilled') {
       return <span className="badge badge-primary">Fullfilled</span>;
     }
 
-    if (status === "not_fulfilled") {
+    if (status === 'not_fulfilled') {
       return <span className="badge badge-secondary">Processing</span>;
     }
 
@@ -108,15 +108,15 @@ class CustomerAccountPage extends Component {
       return <span className="badge badge-secondary">Pending</span>;
     }
 
-    if (status === "not-paid") {
+    if (status === 'not-paid') {
       return <span className="badge badge-warning">Not paid</span>;
     }
 
-    if (status === "paid") {
+    if (status === 'paid') {
       return <span className="badge badge-success">Paid</span>;
     }
 
-    if (status === "refunded") {
+    if (status === 'refunded') {
       return <span className="badge badge-danger">Refunded</span>;
     }
 
@@ -146,11 +146,11 @@ class CustomerAccountPage extends Component {
         {shipping.street_2 && <div>{shipping.street_2}</div>}
         <div>
           {shipping.town_city}
-          {shipping.town_city && shipping.county_state ? "," : ""} {shipping.county_state}
+          {shipping.town_city && shipping.county_state ? ',' : ''} {shipping.county_state}
         </div>
         <div>
           {shipping.country}
-          {shipping.country && shipping.postal_zip_code ? "," : ""} {shipping.postal_zip_code}
+          {shipping.country && shipping.postal_zip_code ? ',' : ''} {shipping.postal_zip_code}
         </div>
       </div>
     );
@@ -225,13 +225,13 @@ class CustomerAccountPage extends Component {
       );
 
     return (
-      <div className={`alert ${isError ? "alert-danger" : "alert-success"}`}>{alertMessage}</div>
+      <div className={`alert ${isError ? 'alert-danger' : 'alert-success'}`}>{alertMessage}</div>
     );
   }
 
   render() {
     if (this.props.loading.customer) {
-      return <TemplatePage page={{ message: "Loading..." }} />;
+      return <TemplatePage page={{ message: 'Loading...' }} />;
     }
 
     // Displays message when the customer logs out.

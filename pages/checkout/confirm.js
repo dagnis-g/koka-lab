@@ -1,8 +1,8 @@
-import React from "react";
-import Head from "next/head";
-import dynamic from "next/dynamic";
+import React from 'react';
+import Head from 'next/head';
+import dynamic from 'next/dynamic';
 
-const OrderConfirm = dynamic(() => import("../../components/checkout/Confirm"), { ssr: false });
+const OrderConfirm = dynamic(() => import('../../components/checkout/Confirm'), { ssr: false });
 
 function Confirm() {
   return (

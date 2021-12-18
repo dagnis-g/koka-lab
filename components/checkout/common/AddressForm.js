@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import commerce from "../../../lib/commerce";
-import Dropdown from "../../common/atoms/Dropdown";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import commerce from '../../../lib/commerce';
+import Dropdown from '../../common/atoms/Dropdown';
 
 export default class AddressForm extends Component {
   constructor(props) {

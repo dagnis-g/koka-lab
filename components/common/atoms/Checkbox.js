@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const Checkbox = ({ checked, size = "24px", color = "#000000", className, onClick, ...rest }) => {
+const Checkbox = ({ checked, size = '24px', color = '#000000', className, onClick, ...rest }) => {
   return (
     <svg
       width="24"
@@ -11,7 +11,7 @@ const Checkbox = ({ checked, size = "24px", color = "#000000", className, onClic
       style={{ height: size, width: size, minHeight: size, minWidth: size }}
       onClick={onClick}
       onKeyDown={(e) => {
-        e.key === "Enter" && onClick();
+        e.key === 'Enter' && onClick();
       }}
       {...rest}
     >

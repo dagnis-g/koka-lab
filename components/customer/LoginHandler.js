@@ -1,13 +1,13 @@
-import React, { Component } from "react";
-import Head from "next/head";
-import Router, { withRouter } from "next/router";
-import { compose } from "redux";
-import { connect } from "react-redux";
-import { setCustomer } from "../../store/actions/authenticateActions";
-import commerce from "../../lib/commerce";
-import Root from "../../components/common/Root";
-import Footer from "../../components/common/Footer";
-import LoginAnimation from "../../components/customer/LoginAnimation";
+import React, { Component } from 'react';
+import Head from 'next/head';
+import Router, { withRouter } from 'next/router';
+import { compose } from 'redux';
+import { connect } from 'react-redux';
+import { setCustomer } from '../../store/actions/authenticateActions';
+import commerce from '../../lib/commerce';
+import Root from '../../components/common/Root';
+import Footer from '../../components/common/Footer';
+import LoginAnimation from '../../components/customer/LoginAnimation';
 
 class LoginHandler extends Component {
   constructor(props) {
@@ -42,13 +42,13 @@ class LoginHandler extends Component {
       .getToken(token)
       .then(() => {
         // Fetch customer details
-        return setCustomer().then(() => Router.push("/account"));
+        return setCustomer().then(() => Router.push('/account'));
       })
       .catch(() => {
         this.setState({
           loading: false,
           isError: true,
-          message: ["The login link has expired. Please try again."],
+          message: ['The login link has expired. Please try again.'],
         });
       });
   }
@@ -85,9 +85,9 @@ class LoginHandler extends Component {
       .then(() => {
         this.setState({
           isError: false,
-          email: "",
+          email: '',
           message: [
-            "If that email address exists in our system, we've just sent you a link to continue logging in!",
+            'If that email address exists in our system, we\'ve just sent you a link to continue logging in!',
           ],
         });
       })
@@ -121,7 +121,7 @@ class LoginHandler extends Component {
       );
 
     return (
-      <div className={`alert ${isError ? "alert-danger" : "alert-success"}`}>{alertMessage}</div>
+      <div className={`alert ${isError ? 'alert-danger' : 'alert-success'}`}>{alertMessage}</div>
     );
   }
 

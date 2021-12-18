@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { CardElement } from "@stripe/react-stripe-js";
-import PropTypes from "prop-types";
-import Radiobox from "../../common/atoms/Radiobox";
+import React, { Component } from 'react';
+import { CardElement } from '@stripe/react-stripe-js';
+import PropTypes from 'prop-types';
+import Radiobox from '../../common/atoms/Radiobox';
 
 export default class PaymentDetails extends Component {
   /**
@@ -13,21 +13,21 @@ export default class PaymentDetails extends Component {
     const { gateways, onChangeGateway, selectedGateway, cardNumber, expMonth, expYear, cvc } =
       this.props;
 
-    if (!gateways || !gateways.available["test_gateway"]) {
+    if (!gateways || !gateways.available['test_gateway']) {
       return null;
     }
 
     return (
       <div className="borderbottom border-color-gray500">
         <label
-          onClick={() => onChangeGateway("test_gateway")}
+          onClick={() => onChangeGateway('test_gateway')}
           className="p-3 d-flex align-items-center cursor-pointer"
         >
-          <Radiobox checked={selectedGateway === "test_gateway"} className="mr-3" />
+          <Radiobox checked={selectedGateway === 'test_gateway'} className="mr-3" />
           <p className="font-weight-medium">Credit/debit card</p>
         </label>
 
-        {selectedGateway === "test_gateway" && (
+        {selectedGateway === 'test_gateway' && (
           <div className="pl-5 pr-3 pb-3 ml-2">
             <div className="row">
               <div className="col-sm-8">
@@ -93,21 +93,21 @@ export default class PaymentDetails extends Component {
   renderStripe() {
     const { gateways, onChangeGateway, selectedGateway } = this.props;
 
-    if (!gateways || !gateways.available["stripe"]) {
+    if (!gateways || !gateways.available['stripe']) {
       return null;
     }
 
     const cardElementOptions = {
       style: {
         base: {
-          fontSize: "16px",
-          color: "#424770",
-          "::placeholder": {
-            color: "#aab7c4",
+          fontSize: '16px',
+          color: '#424770',
+          '::placeholder': {
+            color: '#aab7c4',
           },
         },
         invalid: {
-          color: "#9e2146",
+          color: '#9e2146',
         },
       },
     };
@@ -115,14 +115,14 @@ export default class PaymentDetails extends Component {
     return (
       <div className="borderbottom border-color-gray500">
         <label
-          onClick={() => onChangeGateway("stripe")}
+          onClick={() => onChangeGateway('stripe')}
           className="p-3 d-flex align-items-center cursor-pointer"
         >
-          <Radiobox checked={selectedGateway === "stripe"} className="mr-3" />
+          <Radiobox checked={selectedGateway === 'stripe'} className="mr-3" />
           <p className="font-weight-medium">Credit/debit card (via Stripe)</p>
         </label>
 
-        {selectedGateway === "stripe" && (
+        {selectedGateway === 'stripe' && (
           <div className="pl-5 pr-3 pb-3 ml-2">
             <CardElement options={cardElementOptions} />
           </div>

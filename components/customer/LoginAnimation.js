@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import Lottie from "react-lottie";
-import animationData from "../../lotties/login.json";
+import Lottie from 'react-lottie';
+import animationData from '../../lotties/login.json';
 
 export default function LoginAnimation() {
   const defaultOptions = {
@@ -9,7 +9,7 @@ export default function LoginAnimation() {
     autoplay: true,
     animationData: animationData,
     rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
+      preserveAspectRatio: 'xMidYMid slice',
     },
   };
 

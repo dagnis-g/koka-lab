@@ -1,4 +1,4 @@
-import commerce from "../../lib/commerce";
+import commerce from '../../lib/commerce';
 
 import {
   GET_SHIPPING_OPTIONS,
@@ -7,12 +7,12 @@ import {
   UPDATE_CHECKOUT_LIVE_OBJECT,
   ABORT_CHECKOUT,
   CAPTURE_ORDER_SUCCESS,
-} from "./actionTypes";
+} from './actionTypes';
 
 // Use commerce.js checkout helper, commerce.checkout.getShippingOptions
 // to return list of available shipping methods for the provided checkout token
 export const getShippingOptionsForCheckout =
-  (checkoutId, country = "US") =>
+  (checkoutId, country = 'US') =>
   (dispatch) => {
     return commerce.checkout
       .getShippingOptions(checkoutId, { country })
@@ -28,7 +28,7 @@ export const getShippingOptionsForCheckout =
           // assuming there are no available shipping options
           type: REMOVE_SHIPPING_OPTIONS,
         });
-        console.log("error while fetching list of available shipping options", error);
+        console.log('error while fetching list of available shipping options', error);
         throw error;
       });
   };
@@ -38,7 +38,7 @@ export const getShippingOptionsForCheckout =
 // which can be used to initiate the process of capturing an order
 export const generateCheckoutTokenFromCart = (cartId) => (dispatch) => {
   return commerce.checkout
-    .generateToken(cartId, { type: "cart" })
+    .generateToken(cartId, { type: 'cart' })
     .then((checkout) => {
       dispatch({
         type: GENERATE_CHECKOUT_TOKEN,
@@ -50,7 +50,7 @@ export const generateCheckoutTokenFromCart = (cartId) => (dispatch) => {
       dispatch({
         type: ABORT_CHECKOUT,
       });
-      console.log("error while generating checkout token object");
+      console.log('error while generating checkout token object');
       throw error;
     });
 };
@@ -73,7 +73,7 @@ export const setShippingOptionInCheckout =
         }
       })
       .catch((error) => {
-        console.log("error while attempting to update live object with selected shipping option");
+        console.log('error while attempting to update live object with selected shipping option');
         throw error;
       });
   };
@@ -90,7 +90,7 @@ export const setDiscountCodeInCheckout = (checkoutId, code) => (dispatch) => {
       return resp;
     })
     .catch((error) => {
-      console.log("error while attempting to update live object with discount code");
+      console.log('error while attempting to update live object with discount code');
       throw error;
     });
 };
@@ -109,7 +109,7 @@ export const captureOrder = (checkoutId, order) => (dispatch) => {
     })
     .catch((error) => {
       console.log(
-        "error while attempting to capture order in captureOrder checkout action creator"
+        'error while attempting to capture order in captureOrder checkout action creator'
       );
       throw error;
     });

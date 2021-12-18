@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
-import Head from "next/head";
-import Link from "next/link";
-import Router, { useRouter } from "next/router";
-import { useSelector } from "react-redux";
-import moment from "moment";
-import commerce from "../../lib/commerce";
-import Root from "../../components/common/Root";
-import Footer from "../../components/common/Footer";
-import TemplatePage from "../../components/common/TemplatePage";
-import LoggedOut from "../loggedOut";
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import Router, { useRouter } from 'next/router';
+import { useSelector } from 'react-redux';
+import moment from 'moment';
+import commerce from '../../lib/commerce';
+import Root from '../../components/common/Root';
+import Footer from '../../components/common/Footer';
+import TemplatePage from '../../components/common/TemplatePage';
+import LoggedOut from '../loggedOut';
 
 export default function SingleOrderPage() {
   const router = useRouter();
@@ -26,8 +26,8 @@ export default function SingleOrderPage() {
    * browser.
    */
   const verifyAuth = () => {
-    if (typeof window !== "undefined" && !commerce.customer.isLoggedIn()) {
-      return Router.push("/");
+    if (typeof window !== 'undefined' && !commerce.customer.isLoggedIn()) {
+      return Router.push('/');
     }
   };
   verifyAuth();
@@ -67,7 +67,7 @@ export default function SingleOrderPage() {
     }
     return (
       <small>
-        <strong>Ordered placed on:</strong> {moment(date).format("MMM Do Y")}
+        <strong>Ordered placed on:</strong> {moment(date).format('MMM Do Y')}
       </small>
     );
   };
@@ -105,11 +105,11 @@ export default function SingleOrderPage() {
             {data.street_2 && <div>{data.street_2}</div>}
             <div>
               {data.town_city}
-              {data.town_city && data.county_state ? "," : ""} {data.county_state}
+              {data.town_city && data.county_state ? ',' : ''} {data.county_state}
             </div>
             <div>
               {data.country}
-              {data.town_city && data.county_state ? "," : ""} {data.postal_zip_code}
+              {data.town_city && data.county_state ? ',' : ''} {data.postal_zip_code}
             </div>
           </div>
         </div>
@@ -137,11 +137,11 @@ export default function SingleOrderPage() {
             {data.street_2 && <div>{data.street_2}</div>}
             <div>
               {data.town_city}
-              {data.town_city && data.county_state ? "," : ""} {data.county_state}
+              {data.town_city && data.county_state ? ',' : ''} {data.county_state}
             </div>
             <div>
               {data.country}
-              {data.town_city && data.county_state ? "," : ""} {data.postal_zip_code}
+              {data.town_city && data.county_state ? ',' : ''} {data.postal_zip_code}
             </div>
           </div>
         </div>
@@ -153,7 +153,7 @@ export default function SingleOrderPage() {
    * Render loading state
    */
   if (customerLoading) {
-    return <TemplatePage page={{ message: "Loading..." }} />;
+    return <TemplatePage page={{ message: 'Loading...' }} />;
   }
 
   /**
@@ -167,14 +167,14 @@ export default function SingleOrderPage() {
    * Render a page if an error occurred
    */
   if (error) {
-    return <TemplatePage page={{ message: "Sorry something went wrong." }} />;
+    return <TemplatePage page={{ message: 'Sorry something went wrong.' }} />;
   }
 
   /**
    * Render loading state
    */
   if (loading) {
-    return <TemplatePage page={{ message: "Loading" }} />;
+    return <TemplatePage page={{ message: 'Loading' }} />;
   }
 
   /**
@@ -185,7 +185,7 @@ export default function SingleOrderPage() {
       <TemplatePage
         page={{
           message:
-            "Sorry we cannot find an order with that number, if you think this is in error please contact us!",
+            'Sorry we cannot find an order with that number, if you think this is in error please contact us!',
         }}
       />
     );

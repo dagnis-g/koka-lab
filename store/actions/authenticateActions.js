@@ -1,5 +1,5 @@
-import commerce from "../../lib/commerce";
-import { CLEAR_CUSTOMER, SET_CUSTOMER } from "./actionTypes";
+import commerce from '../../lib/commerce';
+import { CLEAR_CUSTOMER, SET_CUSTOMER } from './actionTypes';
 
 /**
  * Fetch the customer information from Commerce.js. If the customer is not

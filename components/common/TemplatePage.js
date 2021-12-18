@@ -1,7 +1,7 @@
-import React from "react";
-import Head from "next/head";
-import Root from "./Root";
-import Footer from "./Footer";
+import React from 'react';
+import Head from 'next/head';
+import Root from './Root';
+import Footer from './Footer';
 
 const TemplatePage = ({ page: data }) => (
   <Root>

@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import Link from "next/link";
-import Head from "next/head";
-import { connect } from "react-redux";
-import ProductCard from "../products/ProductCard";
+import React, { Component } from 'react';
+import Link from 'next/link';
+import Head from 'next/head';
+import { connect } from 'react-redux';
+import ProductCard from '../products/ProductCard';
 
 class Collections extends Component {
   constructor(props) {
@@ -15,11 +15,11 @@ class Collections extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll);
   }
 
   componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
+    window.removeEventListener('scroll', this.handleScroll);
   }
 
   handleScroll() {
@@ -33,7 +33,7 @@ class Collections extends Component {
       if (distance < 0) {
         this.sidebar.current.style.transform = `translateY(${distance}px)`;
       } else {
-        this.sidebar.current.style.transform = "translateY(0px)";
+        this.sidebar.current.style.transform = 'translateY(0px)';
       }
     };
 
@@ -57,7 +57,7 @@ class Collections extends Component {
                         {category.name}
                         <span
                           className="position-absolute font-size-tiny text-right"
-                          style={{ right: "-12px", top: "-4px" }}
+                          style={{ right: '-12px', top: '-4px' }}
                         >
                           {category.products}
                         </span>
@@ -110,7 +110,7 @@ class Collections extends Component {
                     image={product.media.source}
                     name={product.name}
                     price={product.price.formatted_with_symbol}
-                    description={product.description && product.description.replace(reg, "")}
+                    description={product.description && product.description.replace(reg, '')}
                     soldOut={product.is.sold_out}
                   />
                 </div>
@@ -133,7 +133,7 @@ class Collections extends Component {
           <div
             ref={this.sidebar}
             className="position-fixed left-0 right-0 "
-            style={{ top: "7.5rem" }}
+            style={{ top: '7.5rem' }}
           >
             {this.renderSidebar()}
           </div>

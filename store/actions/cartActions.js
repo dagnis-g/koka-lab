@@ -1,4 +1,4 @@
-import commerce from "../../lib/commerce";
+import commerce from '../../lib/commerce';
 
 import {
   RETRIEVE_CART_SUCCESS,
@@ -9,7 +9,7 @@ import {
   UPDATE_CART_ITEM_ERROR,
   REMOVE_FROM_CART_SUCCESS,
   REMOVE_FROM_CART_ERROR,
-} from "./actionTypes";
+} from './actionTypes';
 
 // Create all Cart actions, define the callbacks to the reducers
 
@@ -27,7 +27,7 @@ export const retrieveCartSuccess = (cart) => {
  * Handle error on retrieve cart fail
  */
 export const retrieveCartError = (error) => {
-  console.log("Error retrieving cart", error);
+  console.log('Error retrieving cart', error);
   return {
     type: RETRIEVE_CART_ERROR,
   };
@@ -57,7 +57,7 @@ export const addToCartSuccess = (product) => {
  * Handle error on adding product to cart
  */
 export const addToCartError = (error) => {
-  console.log("Error adding product to cart", error);
+  console.log('Error adding product to cart', error);
   return {
     type: ADD_TO_CART_ERROR,
   };
@@ -86,7 +86,7 @@ export const updateCartItemSuccess = (item) => {
  * Handle error on updating cart item
  */
 export const updateCartItemError = (error) => {
-  console.log("Error updating cart item", error);
+  console.log('Error updating cart item', error);
   return {
     type: UPDATE_CART_ITEM_ERROR,
   };
@@ -115,7 +115,7 @@ export const removeFromCartSuccess = (resp) => {
  * Handle remove cart item error
  */
 export const removeFromCartError = (error) => {
-  console.log("Error removing cart item", error);
+  console.log('Error removing cart item', error);
   return {
     type: REMOVE_FROM_CART_ERROR,
   };

@@ -1,7 +1,7 @@
-import { useMemo } from "react";
-import { createStore, applyMiddleware, compose } from "redux";
-import { HYDRATE } from "next-redux-wrapper";
-import thunk from "redux-thunk";
+import { useMemo } from 'react';
+import { createStore, applyMiddleware, compose } from 'redux';
+import { HYDRATE } from 'next-redux-wrapper';
+import thunk from 'redux-thunk';
 
 import {
   STORE_PRODUCTS,
@@ -18,7 +18,7 @@ import {
   ABORT_CHECKOUT,
   SET_CUSTOMER,
   CLEAR_CUSTOMER,
-} from "./actions/actionTypes";
+} from './actions/actionTypes';
 
 let store;
 // Declare initial state
@@ -139,7 +139,7 @@ export const initializeStore = (initialState) => {
   }
 
   // For SSG and SSR always create a new store
-  if (typeof window === "undefined") {
+  if (typeof window === 'undefined') {
     return _store;
   }
   // Create the store once in the client

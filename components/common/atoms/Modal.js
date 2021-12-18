@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Transition } from "react-transition-group";
+import React, { Component } from 'react';
+import { Transition } from 'react-transition-group';
 
 /**
  * Duration for the transition
@@ -34,16 +34,16 @@ export default class Modal extends Component {
   }
 
   handleEntering() {
-    const body = document.querySelector("body").body;
+    const body = document.querySelector('body').body;
     if (body) {
-      body.classList.add("modal-open");
+      body.classList.add('modal-open');
     }
   }
 
   handleExiting() {
-    const body = document.querySelector("body").body;
+    const body = document.querySelector('body').body;
     if (body) {
-      body.classList.remove("modal-open");
+      body.classList.remove('modal-open');
     }
   }
 
@@ -75,7 +75,7 @@ export default class Modal extends Component {
               role="dialog"
               tabIndex="-1"
               className={`bg-white my-2 mx-2 mx-sm-auto modal--content overflow-auto ${className}`}
-              style={{ width: maxW, maxHeight: "calc(100vh - 1rem)" }}
+              style={{ width: maxW, maxHeight: 'calc(100vh - 1rem)' }}
             >
               {children}
             </div>
@@ -87,6 +87,6 @@ export default class Modal extends Component {
 }
 
 Modal.defaultProps = {
-  maxW: "480px",
-  className: "p-4 p-md-5",
+  maxW: '480px',
+  className: 'p-4 p-md-5',
 };

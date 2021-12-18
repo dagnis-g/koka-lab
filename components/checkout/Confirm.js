@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import Root from "../../components/common/Root";
-import Link from "next/link";
-import { connect } from "react-redux";
-import { withRouter } from "next/router";
+import React, { Component } from 'react';
+import Root from '../../components/common/Root';
+import Link from 'next/link';
+import { connect } from 'react-redux';
+import { withRouter } from 'next/router';
 
 class Confirm extends Component {
   constructor(props) {
@@ -13,7 +13,7 @@ class Confirm extends Component {
 
   componentDidMount() {
     if (!this.props.orderReceipt) {
-      this.props.router.push("/");
+      this.props.router.push('/');
     }
   }
 
@@ -27,7 +27,7 @@ class Confirm extends Component {
   }
 
   renderPrintButton() {
-    if (typeof window === "undefined") {
+    if (typeof window === 'undefined') {
       return null;
     }
 
@@ -92,7 +92,7 @@ class Confirm extends Component {
     const { orderReceipt } = this.props;
 
     if (!orderReceipt) {
-      return "";
+      return '';
     }
 
     return (
@@ -168,7 +168,7 @@ class Confirm extends Component {
                           {item.selected_options && item.selected_options.length > 0 && (
                             /* todo support multiple variants here */
                             <p className="font-color-light">
-                              {item.selected_options[0].group_name}:{" "}
+                              {item.selected_options[0].group_name}:{' '}
                               {item.selected_options[0].option_name}
                             </p>
                           )}

@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import Lottie from "react-lottie";
-import animationData from "../../lotties/add-to-cart.json";
+import Lottie from 'react-lottie';
+import animationData from '../../lotties/add-to-cart.json';
 
 export default function Animation(props) {
   const defaultOptions = {
@@ -9,7 +9,7 @@ export default function Animation(props) {
     autoplay: false,
     animationData: animationData,
     rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
+      preserveAspectRatio: 'xMidYMid slice',
     },
   };
 

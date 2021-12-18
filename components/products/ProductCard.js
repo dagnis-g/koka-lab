@@ -1,5 +1,5 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
 
 export default function ProductCard({ permalink, image, name, description, price, soldOut }) {
   return (
@@ -8,7 +8,7 @@ export default function ProductCard({ permalink, image, name, description, price
         <div
           className="mb-3"
           style={{
-            paddingBottom: "125%",
+            paddingBottom: '125%',
             background: `url("${image}") center center/cover`,
           }}
         >
