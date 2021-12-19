@@ -42,29 +42,35 @@ class Collections extends Component {
 
   renderSidebar() {
     const { categories } = this.props;
-    console.log(categories);
+
     return (
       <>
         {categories.map((category) => (
           <div key={category.id} className="custom-container ">
             <div className="row ">
               <div className="col-2 d-none d-lg-block  position-relative">
-                {/* <p className="font-size-title font-weight-medium mb-3">{category.name}</p> */}
-                <Link href={`/collection#${category.slug}`}>
-                  <a className="mb-5 font-color-black">
-                    <div className="d-flex">
-                      <p className="mb-2 position-relative cursor-pointer">
-                        {category.name}
-                        <span
-                          className="position-absolute font-size-tiny text-right"
-                          style={{ right: '-12px', top: '-4px' }}
-                        >
-                          {category.products}
-                        </span>
-                      </p>
-                    </div>
-                  </a>
-                </Link>
+                <p className="font-size-title font-weight-medium mb-3">{category.name}</p>
+
+                {category.children.map((child) => {
+                  console.log(child);
+                  return (
+                    <Link key={child.id} href={`/collection#${child.slug}`}>
+                      <a className="mb-5 font-color-black">
+                        <div className="d-flex">
+                          <p className="mb-2 position-relative cursor-pointer">
+                            {child.name}
+                            <span
+                              className="position-absolute font-size-tiny text-right"
+                              style={{ right: '-12px', top: '-4px' }}
+                            >
+                              {child.assets.length}
+                            </span>
+                          </p>
+                        </div>
+                      </a>
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           </div>
