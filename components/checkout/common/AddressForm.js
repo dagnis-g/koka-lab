@@ -124,12 +124,7 @@ export default class AddressForm extends Component {
           <div className="col-12 col-sm-6 mb-3">
             <label className="w-100">
               <p className="mb-1 font-size-caption font-color-light">Novads*</p>
-              <Dropdown
-                required
-                name={`${type}[region]`}
-                value={region}
-                placeholder="Select a region"
-              >
+              <Dropdown required name={`${type}[region]`} value={region} placeholder="Novads">
                 {Object.entries(this.state.subdivisions).map(([code, name]) => (
                   <option key={code} value={code}>
                     {name}

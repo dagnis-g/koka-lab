@@ -24,12 +24,14 @@ export default class PaymentDetails extends Component {
           className="p-3 d-flex align-items-center cursor-pointer"
         >
           <Radiobox checked={selectedGateway === 'test_gateway'} className="mr-3" />
-          <p className="font-weight-medium">Credit/debit card</p>
+          <p className="font-weight-medium">
+            Pārskaitījums(Rēķinu aizsūtīsim epastā 1 darba dienas laikā)
+          </p>
         </label>
 
         {selectedGateway === 'test_gateway' && (
           <div className="pl-5 pr-3 pb-3 ml-2">
-            <div className="row">
+            {/* <div className="row">
               <div className="col-sm-8">
                 <label className="w-100 mb-3 mt-2 mb-sm-0">
                   <p className="mb-1 font-size-caption font-color-light">Card Number</p>
@@ -78,7 +80,7 @@ export default class PaymentDetails extends Component {
                   />
                 </label>
               </div>
-            </div>
+            </div> */}
           </div>
         )}
       </div>
@@ -119,7 +121,7 @@ export default class PaymentDetails extends Component {
           className="p-3 d-flex align-items-center cursor-pointer"
         >
           <Radiobox checked={selectedGateway === 'stripe'} className="mr-3" />
-          <p className="font-weight-medium">Credit/debit card (via Stripe)</p>
+          <p className="font-weight-medium">Credit/debit card (Stripe maksājums)</p>
         </label>
 
         {selectedGateway === 'stripe' && (
@@ -139,7 +141,7 @@ export default class PaymentDetails extends Component {
   render() {
     return (
       <>
-        <p className="font-size-subheader font-weight-semibold mb-3">Payment Detail</p>
+        <p className="font-size-subheader font-weight-semibold mb-3">Maksājuma detaļas</p>
         <div className="border border-color-gray400 mb-5">
           {this.renderTestGateway()}
           {this.renderStripe()}

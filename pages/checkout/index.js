@@ -77,7 +77,7 @@ class CheckoutPage extends Component {
         'shipping[postal_zip_code]': null,
       },
 
-      discountCode: 'CUSTOMCOMMERCE',
+      discountCode: '',
 
       selectedGateway: 'test_gateway',
       loading: false,
@@ -250,7 +250,7 @@ class CheckoutPage extends Component {
         return Promise.reject(resp);
       })
       .catch((error) => {
-        alert('Sorry, the discount code could not be applied');
+        alert('Diemžēl kods neeksistē');
       });
   }
 
@@ -384,7 +384,7 @@ class CheckoutPage extends Component {
       },
       // collected 'order notes' data for extra field configured in the Chec Dashboard
       extrafields: {
-        extr_j0YnEoqOPle7P6: this.state.orderNotes,
+        extr_ZM8X5njRQ5pv4q: this.state.orderNotes,
       },
       // Add more to the billing object if you're collecting a billing address in the
       // checkout form. This is just sending the name as a minimum.
@@ -658,7 +658,7 @@ class CheckoutPage extends Component {
                                 ? `${selectedShippingOption.description} - ${selectedShippingOption.price.formatted_with_code}`
                                 : ''
                             }
-                            placeholder="Select a shipping method"
+                            placeholder="Izvēlaties piegādes veidu"
                           >
                             {shippingOptions &&
                               shippingOptions.map((option) => (
@@ -741,14 +741,14 @@ class CheckoutPage extends Component {
                   )}
 
                   <p className="checkout-error">
-                    {!selectedShippingOption ? 'Select a shipping option!' : ''}
+                    {!selectedShippingOption ? 'Piegādes veids nav norādīts!' : ''}
                   </p>
                   <button
                     type="submit"
                     className="bg-black font-color-white w-100 border-none h-56 font-weight-semibold d-lg-block"
                     disabled={!selectedShippingOption}
                   >
-                    Veikt maksājumu
+                    Veikt pasūtījumu
                   </button>
                 </form>
               )}
@@ -786,7 +786,7 @@ class CheckoutPage extends Component {
                             </div>
                           </div>
                           <div className="text-right font-weight-semibold">
-                            ${item.line_total.formatted_with_code}
+                            {item.line_total.formatted_with_code}
                           </div>
                         </div>
                       </div>
@@ -798,7 +798,7 @@ class CheckoutPage extends Component {
                     name="discountCode"
                     onChange={this.handleChangeForm}
                     value={this.state.discountCode}
-                    placeholder="Gift card or discount code"
+                    placeholder="Atlaižu kods"
                     className="mr-2 col"
                   />
                   <button
@@ -812,25 +812,25 @@ class CheckoutPage extends Component {
                 <div className="py-3 borderbottom border-color-black">
                   {[
                     {
-                      name: 'Subtotal',
+                      name: 'Preces',
                       amount: checkout.live ? checkout.live.subtotal.formatted_with_symbol : '',
                     },
+                    // {
+                    //   name: 'Tax',
+                    //   amount: checkout.live ? checkout.live.tax.amount.formatted_with_symbol : '',
+                    // },
                     {
-                      name: 'Tax',
-                      amount: checkout.live ? checkout.live.tax.amount.formatted_with_symbol : '',
-                    },
-                    {
-                      name: 'Shipping',
+                      name: 'Piegāde',
                       amount: selectedShippingOption
                         ? `${selectedShippingOption.description} - ${selectedShippingOption.price.formatted_with_symbol}`
-                        : 'No shipping method selected',
+                        : 'Piegādes veids nav norādīts',
                     },
                     {
-                      name: 'Discount',
+                      name: 'Atlaide',
                       amount:
                         checkout.live && checkout.live.discount && checkout.live.discount.code
-                          ? `Saved ${checkout.live.discount.amount_saved.formatted_with_symbol}`
-                          : 'No discount code applied',
+                          ? `Ietaupīts ${checkout.live.discount.amount_saved.formatted_with_symbol}`
+                          : 'Atlaižu kupons nav pievienots',
                     },
                   ].map((item, i) => (
                     <div key={i} className="d-flex justify-content-between align-items-center mb-2">
@@ -840,9 +840,9 @@ class CheckoutPage extends Component {
                   ))}
                 </div>
                 <div className="d-flex justify-content-between align-items-center mb-2 pt-3">
-                  <p className="font-size-title font-weight-semibold">Total amount</p>
+                  <p className="font-size-title font-weight-semibold">Kopā apmaksai</p>
                   <p className="text-right font-weight-semibold font-size-title">
-                    $ {checkout.live ? checkout.live.total.formatted_with_code : ''}
+                    {checkout.live ? checkout.live.total.formatted_with_code : ''}
                   </p>
                 </div>
               </div>
