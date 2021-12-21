@@ -87,7 +87,7 @@ class LoginHandler extends Component {
           isError: false,
           email: '',
           message: [
-            "If that email address exists in our system, we've just sent you a link to continue logging in!",
+            'If that email address exists in our system, we\'ve just sent you a link to continue logging in!',
           ],
         });
       })
