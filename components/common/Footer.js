@@ -46,7 +46,7 @@ const Footer = () => (
       <div className="bg-dark border-top">
         <div className="custom-container d-flex  align-items-center justify-content-center">
           <div className="text-light font-size-caption py-4">
-            &copy; {new Date().getFullYear()} Dagnis
+            &copy; {new Date().getFullYear()} Koka Laboratorija
           </div>
         </div>
       </div>

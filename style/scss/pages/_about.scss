@@ -41,6 +41,35 @@
       }
     }
   }
+  .links-noteikumi {
+    color: #2c7ea1;
+  }
+  .row-noteikumi {
+    padding-bottom: 1rem;
+    @include small-xs {
+      padding-bottom: 2rem;
+    }
+
+    .row-content {
+      padding-left: 3rem;
+      padding-right: 3rem;
+
+      @include small-xs {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .cjs-link {
+        color: #2c7ea1;
+        font-weight: bold;
+
+        &:hover {
+          color: darken(#2c7ea1, 10%);
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
 
   .about-cjs {
     .about-doc {

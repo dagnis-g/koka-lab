@@ -9,6 +9,7 @@ export default class PaymentDetails extends Component {
    *
    * @returns {JSX.Element}
    */
+
   renderTestGateway() {
     const { gateways, onChangeGateway, selectedGateway, cardNumber, expMonth, expYear, cvc } =
       this.props;

@@ -748,7 +748,7 @@ class CheckoutPage extends Component {
                     className="bg-black font-color-white w-100 border-none h-56 font-weight-semibold d-lg-block"
                     disabled={!selectedShippingOption}
                   >
-                    Veikt pasūtījumu
+                    Veikt maksājumu
                   </button>
                 </form>
               )}
@@ -829,7 +829,7 @@ class CheckoutPage extends Component {
                       name: 'Atlaide',
                       amount:
                         checkout.live && checkout.live.discount && checkout.live.discount.code
-                          ? `Ietaupīts ${checkout.live.discount.amount_saved.formatted_with_symbol}`
+                          ? ` ${checkout.live.discount.amount_saved.formatted_with_symbol}`
                           : 'Atlaižu kupons nav pievienots',
                     },
                   ].map((item, i) => (
