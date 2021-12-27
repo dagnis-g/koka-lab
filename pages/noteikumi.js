@@ -70,12 +70,12 @@ const Noteikumi = () => (
             atpakaļ, vai tās ātri bojājas vai ir ātri izlietojamas; pasūtītās preces ir izgatavotas
             tieši Pircējam pēc individuāla pasūtījuma; pircējs ir atvēris audioierakstu vai
             videoierakstu, vai datorprogrammu iepakojumu. Latvijas Republikas Patērētāju tiesību
-            aizsardzības likuma 12. panta sestā daļa nosaka, ka "patērētājs ir atbildīgs par preces
-            kvalitātes un drošuma saglabāšanu atteikuma tiesību realizēšanas termiņā". Pārdevējs
-            patur tiesības Pircējam atteikt izmantot atteikuma tiesības vai ieturēt kompensācijas
-            maksu gadījumā, ja prece ir bojāta, lietošanas laikā nevērīgi izturoties pret preci vai
-            neievērojot instrukcijas norādījumus, ja ir nozaudēts preces oriģinālais iepakojums vai
-            ja tās iepakojums ir būtiski bojāts.
+            aizsardzības likuma 12. panta sestā daļa nosaka, ka &quot;patērētājs ir atbildīgs par
+            preces kvalitātes un drošuma saglabāšanu atteikuma tiesību realizēšanas termiņā&quot;.
+            Pārdevējs patur tiesības Pircējam atteikt izmantot atteikuma tiesības vai ieturēt
+            kompensācijas maksu gadījumā, ja prece ir bojāta, lietošanas laikā nevērīgi izturoties
+            pret preci vai neievērojot instrukcijas norādījumus, ja ir nozaudēts preces oriģinālais
+            iepakojums vai ja tās iepakojums ir būtiski bojāts.
           </h4>
         </div>
       </div>
