@@ -35,7 +35,7 @@ class MyDocument extends Document {
             name="description"
             content="Koka rotaļlietas, mīkstās mantiņas un adījumi Tavam mazajam"
           />
-          <meta property="og:title" content="Commerce.js | Demo storefront" />
+          {/* <meta property="og:title" content="Commerce.js | Demo storefront" /> */}
           <meta property="og:image" content="../public/images/home-1.jpg" />
           <meta
             property="og:description"

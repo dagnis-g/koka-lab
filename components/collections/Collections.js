@@ -42,7 +42,7 @@ class Collections extends Component {
 
   renderSidebar() {
     const { categories } = this.props;
-    console.log(categories);
+    console.log(this.props);
     return (
       <>
         {categories.map((category) => (
