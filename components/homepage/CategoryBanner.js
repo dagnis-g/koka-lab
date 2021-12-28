@@ -29,7 +29,7 @@ class CategoryBanner extends Component {
                       />
                       {/* )} */}
                       <p className="mb-2 font-size-heading text-center">{item.name}</p>
-                      {console.log(item.assets[0].url)}
+                      {/* {console.log(item.assets[0].url)} */}
                     </div>
                   </a>
                 </Link>

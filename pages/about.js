@@ -78,6 +78,66 @@ const About = () => (
           </div>
         </div>
       </div>
+      {/* Row avize */}
+      <div className="row">
+        <div className="col-12 col-lg-6">
+          <div className="about-image h-100">
+            <div className="d-flex align-items-center justify-content-center h-100">
+              <img src="/images/avize.jpg" alt="šuj lelli" />
+            </div>
+          </div>
+        </div>
+
+        <div className="col-12 col-md-10 col-lg-6 offset-md-1 offset-lg-0 row-content">
+          <div className="h-100 d-flex flex-column justify-content-center py-5 px-4 px-sm-5">
+            <h3 className="font-size-header mb-4 virsraksts">
+              Publikācija laikrakstā &quot;Kas Jauns Avīze&quot;
+            </h3>
+          </div>
+        </div>
+      </div>
+      {/*kur atrast*/}
+
+      <div className="d-flex align-items-center justify-content-center">
+        <h3 className="font-size-header mb-5 pb-5 virsraksts">KUR MŪS ATRAST</h3>
+      </div>
+
+      {/* Row 4 */}
+      <div className="row">
+        <div className="col-12 col-lg-6">
+          <div className="about-image h-100">
+            <div className="d-flex align-items-center justify-content-center h-100">
+              <img src="/images/kurkuuld.jpg" alt="kuuld veikals" />
+            </div>
+          </div>
+        </div>
+
+        <div className="col-12 col-md-10 col-lg-6 offset-md-1 offset-lg-0 row-content">
+          <div className="h-100 d-flex flex-column justify-content-center py-5 px-4 px-sm-5">
+            <h3 className="font-size-header mb-4 virsraksts">Suvenīru veikals “KUULD”</h3>
+            <h4 className="font-size-subheader mb-4 teksts">Baznīcas iela 27, Kuldīga</h4>
+          </div>
+        </div>
+      </div>
+      {/* Row 5 */}
+      <div className="row">
+        <div className="col-12 col-md-10 col-lg-6 offset-md-1 offset-lg-0 row-content">
+          <div className="h-100 d-flex flex-column justify-content-center py-5 px-4 px-sm-5">
+            <h3 className="font-size-header mb-4 virsraksts">
+              Ziedu un dāvanu bodīte “Sauja pavasara”
+            </h3>
+            <h4 className="font-size-subheader mb-4">Zeltiņu iela 6, Mārupe</h4>
+          </div>
+        </div>
+
+        <div className="col-12 col-lg-6">
+          <div className="about-image h-100">
+            <div className="d-flex align-items-center justify-content-center h-100">
+              <img src="/images/kursauja.jpg" alt="adīta jaciņa" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <Footer />
   </Root>

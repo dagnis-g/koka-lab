@@ -1,0 +1,20 @@
+.container {
+  margin: 10rem 3rem;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2c9465;
+}
+
+.bildes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bilde {
+  width: 300px;
+  margin: 2rem;
+}

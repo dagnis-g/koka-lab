@@ -3,7 +3,7 @@ header {
 }
 
 .header {
-  padding: 1.5rem 3rem;
+  padding: 0rem 2rem;
   background-color: rgba(255, 255, 255, 0.61);
   // transparent;
   border-bottom: 1px solid;
@@ -26,10 +26,10 @@ header {
   .logo-container {
     display: flex;
     align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
 
     @include small-xs {
       position: static;

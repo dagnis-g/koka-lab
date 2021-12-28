@@ -39,6 +39,10 @@ const mobileMenuLinks = [
     name: 'Noteikumi',
     link: '/noteikumi',
   },
+  {
+    name: 'Priecīgie Klienti',
+    link: '/priecigie',
+  },
 ];
 
 class Header extends Component {
@@ -189,6 +193,9 @@ class Header extends Component {
             </Link>
             <Link href="/about">
               <a className="mr-4 font-color-black">Par Mums</a>
+            </Link>
+            <Link href="/priecigie">
+              <a className="mr-4 font-color-black">Priecīgie Klienti</a>
             </Link>
             <Link href="/noteikumi">
               <a className="font-color-black">Noteikumi</a>

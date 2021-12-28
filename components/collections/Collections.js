@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import { connect } from 'react-redux';
 import ProductCard from '../products/ProductCard';
+// import Spinner from 'react-bootstrap/Spinner';
 
 class Collections extends Component {
   constructor(props) {
@@ -42,7 +43,7 @@ class Collections extends Component {
 
   renderSidebar() {
     const { categories } = this.props;
-    console.log(this.props);
+
     return (
       <>
         {categories.map((category) => (
@@ -92,6 +93,21 @@ class Collections extends Component {
    * Render collections based on categories available in data
    */
   renderCollection() {
+    console.log(this.props.products);
+    if (this.props.products.length < 10) {
+      return (
+        <div className="d-flex vh-100 justify-content-center mt-4">
+          <div
+            className="spinner-border text-success"
+            style={{ width: '5rem', height: '5rem' }}
+            role="status"
+          >
+            <span className="sr-only">Loading...</span>
+          </div>
+        </div>
+      );
+    }
+
     const { categories } = this.props;
     const reg = /(<([^>]+)>)/gi;
 

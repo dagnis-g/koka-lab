@@ -626,6 +626,7 @@ class CheckoutPage extends Component {
                         <p className="mb-1 font-size-caption font-color-light">Epasta adrese*</p>
                         <input
                           required
+                          type="email"
                           name="customer[email]"
                           autoComplete="email"
                           value={this.state['customer[email]']}
