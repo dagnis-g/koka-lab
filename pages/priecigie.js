@@ -85,6 +85,9 @@ const imagesInfo = [
   {
     image: '/images/priecigie/24.jpg',
   },
+  {
+    image: '/images/priecigie/25.jpg',
+  },
 ];
 
 const Priecigie = () => (

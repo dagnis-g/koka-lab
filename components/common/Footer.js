@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const Footer = () => (
   <footer className="pt-5 border-top bg-light">
@@ -9,9 +10,9 @@ const Footer = () => (
           <div className="d-flex font-color-medium mb-5 pb-3 pb-md-0 mb-md-0">
             <div className="pr-5 mb-3 d-block font-color-medium">
               Tālrunis: +371 28150759<br></br>
-              E-pasts: kokalaboratorija@gmail.com<br></br> Adrese: Raiņa iela 22 Alsunga, LV - 3306
+              E-pasts: kokalaboratorija@gmail.com<br></br> Adrese: Raiņa iela 22, Alsunga, LV - 3306
               <br></br> Rekvizīti: KOKA LABORATORIJA IK <br></br>LV70HABA0551049954048 <br></br>
-              Reģ.nr. 40002187885
+              Reģ.nr. 40002187885<br></br>
             </div>
           </div>
         </div>
@@ -39,6 +40,12 @@ const Footer = () => (
               </a>
             </div>
           </div>
+        </div>
+        <div>
+          <p className="font-family-secondary font-size-display1 mb-4">Noteikumi</p>
+          <Link href="/noteikumi">
+            <a className="font-color-medium">Apskatīt</a>
+          </Link>
         </div>
       </div>
     </div>

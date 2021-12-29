@@ -15,7 +15,7 @@ class SuggestedProducts extends Component {
             className="text-center font-size-display1 mb-3 font-weight-medium"
             style={{ maxWidth: '32rem' }}
           >
-            Varūt vēlaties aplūkot arī citus produktus
+            Varbūt vēlies aplūkot arī citus produktus?
           </p>
         </div>
         <ProductRow products={products.slice(0, 4)} />

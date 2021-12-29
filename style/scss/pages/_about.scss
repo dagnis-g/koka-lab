@@ -103,9 +103,9 @@
   .about-image {
     img {
       width: 100%;
-      @include small-xs {
-        display: none;
-      }
+      // @include small-xs {
+      //   display: none;
+      // }
     }
   }
 }

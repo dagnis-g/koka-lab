@@ -17,11 +17,11 @@ const About = () => (
             <h4 className="font-size-subheader mb-4 teksts">
               Mēs esam mākslinieki no Kurzemes laukiem un domājam, ka vislabākā iedvesma nāk tieši
               no maģiski klusās meža skaņas, piejūras vēja šalkoņas, lapu čaboņas un putnu dziesmām
-              agri no rītīa, vai sienāžu dziesmām pie kaimiņu dīķīķa... Katrā ziņā mūsu iedvesma un
+              agri no rīta, vai sienāžu dziesmām pie kaimiņu dīķa... Katrā ziņā mūsu iedvesma un
               materiāli nākuši tieši no dabas. Mēs piedāvājam ar meistara rokām darinātas,
-              kvalitatīvī a koka materiāla preces, kas iepriecinās jebkurus dabiskā dzīvī esstila
-              piekritējus - vecākus, un, protams, viņu mazākos mīlīuļus - bērnus. Visi darinājumi
-              apstrādāti ar 100% linsēklu eļļu, kas nav kaitīgī a ne pieaugušajiem, ne bērniem.
+              kvalitatīvas koka materiāla preces, kas iepriecinās jebkurus dabiskā dzīvesstila
+              piekritējus - vecākus, un, protams, viņu mazākos mīluļus - bērnus. Visi darinājumi
+              apstrādāti ar 100% linsēklu eļļu, kas nav kaitīgī ne pieaugušajiem, ne bērniem.
             </h4>
           </div>
         </div>
@@ -47,11 +47,11 @@ const About = () => (
 
         <div className="col-12 col-md-10 col-lg-6 offset-md-1 offset-lg-0 row-content">
           <div className="h-100 d-flex flex-column justify-content-center py-5 px-4 px-sm-5">
-            <h3 className="font-size-header mb-4 virsraksts">LELLĪTĪES UN MĪKĪSTIE ZVĒRI</h3>
+            <h3 className="font-size-header mb-4 virsraksts">LELLĪTES UN MĪKSTIE ZVĒRI</h3>
             <h4 className="font-size-subheader mb-4 teksts">
-              Šujam arī krāsainas, dzīvī espriecīgī as un radošas lellītīes, kas patiks mazajām
-              modes dāmām, kā arī gatavojam eko zvērus - no lina, kokvilnas, pildītīus ar griķu
-              sēnalām, kā arī hipoalerģiskiem pildījīumiem.
+              Šujam arī krāsainas, dzīvespriecīgas un radošas lellītes, kas patiks mazajām modes
+              dāmām, kā arī gatavojam eko zvērus - no lina, kokvilnas, pildītus ar griķu sēnalām, kā
+              arī hipoalerģiskiem pildījīumiem.
             </h4>
           </div>
         </div>
@@ -63,9 +63,9 @@ const About = () => (
           <div className="h-100 d-flex flex-column justify-content-center py-5 px-4 px-sm-5">
             <h3 className="font-size-header mb-4 virsraksts">Adījumi</h3>
             <h4 className="font-size-subheader mb-4">
-              Bet varbūt Tu meklē ko īpašu 0-3 mēnešu vecuma mazulītīim? Mums ir kas padomā! Adījumi
-              - kopējie kostīmīņi, jaciņas, zeķītīes, zābaciņi, čībiņas, cepurītīes, kā arī
-              komplektu opcijas.
+              Bet varbūt Tu meklē ko īpašu 0-3 mēnešu vecuma mazulītim? Mums ir kas padomā! Adījumi
+              - kopējie kostīmiņi, jaciņas, zeķītes, zābaciņi, čībiņas, cepurītes, kā arī komplektu
+              opcijas.
             </h4>
           </div>
         </div>
@@ -99,7 +99,7 @@ const About = () => (
       {/*kur atrast*/}
 
       <div className="d-flex align-items-center justify-content-center">
-        <h3 className="font-size-header mb-5 pb-5 virsraksts">KUR MŪS ATRAST</h3>
+        <h3 className="font-size-header mb-5 pb-5 virsraksts">KUR MŪS VAR ATRAST?</h3>
       </div>
 
       {/* Row 4 */}

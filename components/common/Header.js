@@ -35,10 +35,7 @@ const mobileMenuLinks = [
     name: 'Par Mums',
     link: '/about',
   },
-  {
-    name: 'Noteikumi',
-    link: '/noteikumi',
-  },
+
   {
     name: 'Priecīgie Klienti',
     link: '/priecigie',
@@ -188,6 +185,9 @@ class Header extends Component {
           }`}
         >
           <div className="d-none d-sm-flex">
+            <Link href="/">
+              <a className="mr-4 font-color-black">Sākums</a>
+            </Link>
             <Link href="/collection">
               <a className="mr-4 font-color-black">Veikals</a>
             </Link>
@@ -196,9 +196,6 @@ class Header extends Component {
             </Link>
             <Link href="/priecigie">
               <a className="mr-4 font-color-black">Priecīgie Klienti</a>
-            </Link>
-            <Link href="/noteikumi">
-              <a className="font-color-black">Noteikumi</a>
             </Link>
           </div>
           <div className="logo-container">

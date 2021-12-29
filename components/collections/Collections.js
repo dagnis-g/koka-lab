@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Head from 'next/head';
 import { connect } from 'react-redux';
 import ProductCard from '../products/ProductCard';
-// import Spinner from 'react-bootstrap/Spinner';
 
 class Collections extends Component {
   constructor(props) {
