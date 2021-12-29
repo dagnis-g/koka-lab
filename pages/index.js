@@ -8,6 +8,7 @@ import HeroSection from '../components/homepage/HeroSection';
 import HomeBanner from '../components/homepage/HomeBanner';
 import CategoryBanner from '../components/homepage/CategoryBanner';
 import ProductsBanner from '../components/homepage/ProductsBanner';
+import CookieConsent from 'react-cookie-consent';
 
 const Home = () => (
   <Root transparentHeader={true}>
@@ -16,6 +17,9 @@ const Home = () => (
     </Head>
 
     <HeroSection />
+    <CookieConsent buttonText="OK">
+      Mēs lietojam sīkfailus pakalpojuma nodrošināšanai un uzlabošanai.
+    </CookieConsent>
     <HomeBanner />
     <CategoryBanner />
     <ProductsBanner />
