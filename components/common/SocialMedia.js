@@ -71,7 +71,7 @@ export default class SocialMedia extends React.Component {
           <div className="row footer-follow--header">
             <div className="px-3 footer-follow--title">
               <p className="font-size-display1 mb-3" style={{ maxWidth: '26rem' }}>
-                Seko mums sociālajos tīklos
+                Seko mums sociālajos tīklos!
               </p>
               <div className="d-flex">
                 {/* <Link href="/about"> */}
