@@ -89,7 +89,7 @@ const imagesInfo = [
     image: '/images/priecigie/25.jpeg',
   },
   {
-    image: '/images/priecigie/26.jpeg',
+    image: '/images/priecigie/26.jpg',
   },
 ];
 
