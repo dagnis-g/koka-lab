@@ -180,9 +180,10 @@ class Header extends Component {
         <Cart isOpen={showCart} toggle={(value) => this.toggleCart(value)} />
         <div
           ref={this.header}
-          className={`d-flex header align-items-center justify-content-between position-relative ${
-            transparent ? '' : 'invert'
-          }`}
+          className={`d-flex header align-items-center 
+          
+          position-relative ${transparent ? '' : 'invert'}`}
+          // justify-content-between
         >
           <div className="d-none d-sm-flex">
             <Link href="/">
@@ -207,11 +208,11 @@ class Header extends Component {
             />
             <Link href="/">
               <a>
-                <img src="/images/kl.png" className="logo cursor-pointer" alt="Logo" />
+                <img src="/images/kl2.png" className="logo cursor-pointer" alt="Logo" />
               </a>
             </Link>
           </div>
-          <div className="d-flex">
+          <div className="d-flex grozs">
             {
               process.browser
               // && this.renderLoginLogout()
