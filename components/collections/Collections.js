@@ -97,7 +97,7 @@ class Collections extends Component {
       return (
         <div className="d-flex vh-100 justify-content-center mt-4">
           <div
-            className="spinner-border text-success"
+            className="spinner-border text-warning"
             style={{ width: '5rem', height: '5rem' }}
             role="status"
           >

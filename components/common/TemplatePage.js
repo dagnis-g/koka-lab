@@ -13,8 +13,8 @@ const TemplatePage = ({ page: data }) => (
         {/* {data.message} */}
         <div className="d-flex vh-100 justify-content-center mt-4">
           <div
-            className="spinner-border text-success"
-            style={{ width: '5rem', height: '5rem' }}
+            className="spinner-border text-warning"
+            style={{ width: '5rem', height: '5rem', color: 'brown' }}
             role="status"
           >
             <span className="sr-only">Loading...</span>
